@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	font-weight: normal;
+}
+
+:root {
+	--r: 18;
+	--c: 40;
+	--cell-size: calc(0.8*100vw/var(--c));
+}
+
+p {
+	margin: 0;
+}
+
+.contain{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	text-align: center;
+}
+
+h3 {
+	padding: 10px 0px;
+}
+
+.tools {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+#selected {
+	padding: 10px;
+}
+
+.board {
+	display: grid;
+	grid-template: repeat(var(--r), var(--cell-size)) / repeat(var(--c), var(--cell-size));
+}
+
+.cell {
+	text-align: center;
+	border-style: solid;
+	background-color: white;
+	border-width: 1px;
+	border-color: rgba(0,0,0,0.30);
+}
+
+.cell:hover {
+	background-color: #e0e0e0;
+}
+
+#reset {
+	margin: 15px;
+}
